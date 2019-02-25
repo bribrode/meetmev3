@@ -1,0 +1,275 @@
+/* STYLING FOR ELEMENTS ON ALL PAGES */
+
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+/* Skip to main content */
+.skiptomain{
+  text-decoration: none;
+  position: relative;
+  padding: 15px;
+  left: -200px;
+  transition: left ease-in .5s;
+  top: 15px;
+
+}
+
+.skiptomain:focus {
+  left: 0;
+}
+
+/* Navigation  */
+header{
+  min-height: 20vh;
+}
+
+header img{
+  padding: 10px;
+  margin: auto;
+  width: 15vw;
+  min-width: 150px;
+  display: block;
+}
+
+nav{
+  margin: 20px 0 0;
+  text-align: center;
+  background-color: #48449C;
+  padding: 10px;
+  border-bottom: #48449C 2px solid;
+
+}
+
+nav li{
+  padding: 8px;
+}
+
+nav a{
+  color: #FFFFFF;
+  text-decoration: None;
+}
+
+.current{
+  font-weight: bold;
+  border-bottom: #FDBE3D 4px solid;
+}
+
+@media screen and (min-width: 700px){
+  nav{
+    padding: 20px;
+  }
+
+  nav li{
+    display: inline;
+  }
+
+  nav a{
+    padding: 20px 30px 16px;
+  }
+
+  .current{
+    color: #48449C;
+    background-color: white;
+      font-weight: bold;
+  }
+}
+
+/* Footer */
+footer{
+  background-color: #FDBE3D;
+  min-height: 15vh;
+  margin-top: 8vh;
+}
+
+footer p{
+  line-height: 15vh;
+  text-align: center;
+}
+
+/* Body */
+body {
+  font-family: Raleway;
+  font-size: 1.1em;
+}
+
+p{
+  line-height: 1.3em;
+  padding-bottom: 1em;
+}
+
+main{
+  width: 80vw;
+  min-height: 65vh;
+  margin: 0 auto;
+
+}
+
+h1 {
+  font-size: 1.75em;
+  color: #48449C;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 2vh;
+  margin-top: 8vh;
+}
+
+h2{
+  color: #9C235D;
+  font-size: 1.4em;
+}
+
+h3{
+  font-size: 1.2em;
+}
+
+h4{
+  margin-top: 2vh;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.15em;
+}
+
+a{
+  text-decoration: none;
+  /* font-weight: bold; */
+  color: #9C235D;
+}
+
+/* HOME PAGE ELEMENTS*/
+
+#slideshow img{
+  width: 80vw;
+  margin: 0 auto;
+  display: block;
+  z-index: -1;
+}
+
+
+
+
+/* TOUR PAGE ELEMENTS*/
+.tourCal, .pastTours{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.tourDate, .pastDate{
+  flex-grow: 1;
+  /* align-self: center; */
+  border: orange 3px solid;
+  padding: 5vh;
+}
+
+.pastDate{
+  width: 30vw;
+}
+
+.tourDate img, .pastDate img{
+  margin: 0 auto;
+  display: block;
+  width: 20vw;
+  min-width: 150px;
+}
+
+.tourDate, .pastDate{
+  text-align: center;
+}
+
+.tourDate h2, .pastDate h2{
+  margin: 2vh auto;
+}
+
+/* FACILITY PAGE ELEMENTS */
+
+
+.facility img{
+  max-width: 150px;
+  display: inline-block;
+  margin: auto 0;
+
+}
+
+.facility .content{
+  /* grid-column-start: 2;
+  grid-column-end: 2; */
+  display: inline-block;
+  width: 60vw;
+  margin: 4vh auto 0;
+}
+
+/* NEWS PAGE ELEMENTS */
+/* #docents{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+} */
+
+#blog, #poems{
+  margin: 0 2vh;
+}
+
+#poems{
+  text-align: center;
+}
+
+#poems article{
+  border: #48449C 4px solid;
+  padding: 3vh;
+}
+
+article h2, h3{
+  margin: 1vh auto;
+}
+
+article img{
+  display: block;
+  margin: 0 auto;
+  width: 30vw;
+  min-width: 250px;
+
+}
+
+#blog article{
+  border: #FDBE3D 4px solid;
+  padding: 3vh;
+}
+
+.far{
+  color: #FDBE3D;
+}
+
+
+/* CONTACT PAGE ELEMENTS */
+#contact{
+  background-image: url(../images/dorazio.jpg);
+  /* background-repeat: no-repeat; */
+  background-size: 80vw;
+  height: 80vh;
+}
+
+#transparent{
+  background: rgba(255,255,255,.75);
+  margin: 5vw ;
+  padding: 5vw;
+  height: 80vh;
+}
+
+input{
+  width: 60vw;
+  margin-bottom: 3vh;
+  padding: 1vh 0;
+}
+
+#message{
+  width: 60vw;
+  height: 10vh;
+}
+
+
+#submit{
+  background-color: #48449C;
+  color: White;
+  font-weight: bold;
+  font-size: .8em;
+  padding: 1vh 0;
+}
