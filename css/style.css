@@ -23,7 +23,11 @@ header{
   min-height: 20vh;
 }
 
-header img{
+#at{
+  display: none;
+}
+
+#logo{
   padding: 10px;
   margin: auto;
   width: 15vw;
@@ -54,7 +58,35 @@ nav a{
   border-bottom: #FDBE3D 4px solid;
 }
 
-@media screen and (min-width: 700px){
+@media (orientation: landscape) and (max-width: 1200px){
+  header{
+    width: 27vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: #48449C 2px solid;
+  }
+
+  #at{
+    display: block;
+    width: 9vw;
+    margin: 8vh auto 2vh;
+  }
+
+  main{
+    border-left: White 27vw solid;
+    max-width: 68vw;
+  }
+
+  nav{
+    height: 100%;
+    border: auto;
+  }
+
+}
+
+@media (min-width: 1200px){
   nav{
     padding: 20px;
   }
@@ -70,9 +102,22 @@ nav a{
   .current{
     color: #48449C;
     background-color: white;
-      font-weight: bold;
+    font-weight: bold;
+  }
+
+  main{
+    width: 80vw;
+    min-height: 65vh;
+    margin: 0 auto;
   }
 }
+
+main{
+  /* width: 80vw; */
+  min-height: 65vh;
+  margin: 0 auto;
+}
+
 
 /* Footer */
 footer{
@@ -97,12 +142,7 @@ p{
   padding-bottom: 1em;
 }
 
-main{
-  width: 80vw;
-  min-height: 65vh;
-  margin: 0 auto;
 
-}
 
 h1 {
   font-size: 1.75em;
@@ -115,18 +155,18 @@ h1 {
 
 h2{
   color: #9C235D;
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 h3{
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 h4{
   margin-top: 2vh;
   font-weight: bold;
   text-align: center;
-  font-size: 1.15em;
+  font-size: 1.05em;
 }
 
 a{
@@ -137,13 +177,54 @@ a{
 
 /* HOME PAGE ELEMENTS*/
 
-#slideshow img{
-  width: 80vw;
-  margin: 0 auto;
+#groupPic{
+  display: none;
+}
+
+#gilliam{
+  width: 100vw;
+  margin: 0;
   display: block;
   z-index: -1;
 }
 
+#about, #tours, #facilities, #news, #contact{
+  width: 85vw;
+  margin: 0 auto;
+}
+
+@media (orientation: landscape) and (max-width: 1200px){
+  #groupPic{
+    display: block;
+    width: 68vw;
+  }
+
+  #gilliam{
+    display: none;
+  }
+
+  #about, #tours, #facilities, #news, #contact{
+    padding: 0 2vw;
+    width: 65vw;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px){
+  #groupPic{
+    width: 70vw;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #gilliam{
+    display: none;
+  }
+
+  #about, #tours, #facilities, #news, #contact{
+    width: 80vw;
+  }
+}
 
 
 
@@ -159,11 +240,10 @@ a{
   /* align-self: center; */
   border: orange 3px solid;
   padding: 5vh;
+  text-align: center;
+  width: 80vw;
 }
 
-.pastDate{
-  width: 30vw;
-}
 
 .tourDate img, .pastDate img{
   margin: 0 auto;
@@ -172,30 +252,74 @@ a{
   min-width: 150px;
 }
 
-.tourDate, .pastDate{
-  text-align: center;
-}
-
 .tourDate h2, .pastDate h2{
   margin: 2vh auto;
 }
 
+
+@media (orientation: landscape) and (max-width: 1200px){
+  .tourDate, .pastDate{
+    width: 23vw;
+  }
+}
+
+@media (min-width: 1200px){
+  .tourDate, .pastDate{
+    width: 20vw;
+  }
+  .tourDate img, .pastDate img{
+    width: 15vw;
+  }
+}
 /* FACILITY PAGE ELEMENTS */
 
 
 .facility img{
-  max-width: 150px;
-  display: inline-block;
-  margin: auto 0;
-
+  max-width: 165px;
+  width: 35vw;
+  display: block;
+  margin: 5vh auto 2vh;
 }
 
-.facility .content{
-  /* grid-column-start: 2;
-  grid-column-end: 2; */
-  display: inline-block;
-  width: 60vw;
-  margin: 4vh auto 0;
+.facility{
+  margin: 5vh 0;
+}
+
+.facility h3{
+  text-align: center;
+}
+
+@media (orientation: landscape) and (max-width: 1200px){
+
+  .facility img{
+    display: inline-block;
+    margin: auto 1vh 10vh;
+  }
+
+  .facility .content{
+    display: inline-block;
+    width: 38vw;
+  }
+
+  .facility h3{
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px){
+  .facility img{
+    display: inline-block;
+    margin: auto 1vh 4vh;
+  }
+
+  .facility .content{
+    display: inline-block;
+    width: 58vw;
+  }
+
+  .facility h3{
+    text-align: left;
+  }
 }
 
 /* NEWS PAGE ELEMENTS */
@@ -217,6 +341,10 @@ a{
   padding: 3vh;
 }
 
+#poems h1{
+  margin-top: 0;
+}
+
 article h2, h3{
   margin: 1vh auto;
 }
@@ -236,19 +364,53 @@ article img{
 
 .far{
   color: #FDBE3D;
+  display: block;
+  margin-top: 10vh;
 }
 
+@media (orientation: landscape) and (max-width: 1200px){
+#poems article{
+  width: 25vw;
+  display: inline-block;
+  margin: 2vh .5vw;
+}
+}
+
+@media (min-width: 1200px){
+  #poems article{
+    width: 20vw;
+    display: inline-block;
+    margin: 2vh .5vw;
+  }
+
+  #blogBox{
+    display: flex;
+    width: 80vw;
+  }
+
+  #blog article{
+    width: 45vw;
+    margin: 2vh 1vh;
+    display: inline-block;
+    /* flex-wrap: wrap-reverse; */
+  }
+
+  #blog h1{
+    display: block;
+  }
+
+}
 
 /* CONTACT PAGE ELEMENTS */
 #contact{
-  background-image: url(../images/dorazio.jpg);
+  background-image: url(../images/pitchers.jpg);
   /* background-repeat: no-repeat; */
-  background-size: 80vw;
-  height: 80vh;
+  background-size: 85vw;
+  height: 85vh;
 }
 
 #transparent{
-  background: rgba(255,255,255,.75);
+  background: rgba(255,255,255,.85);
   margin: 5vw ;
   padding: 5vw;
   height: 80vh;
@@ -258,6 +420,7 @@ input{
   width: 60vw;
   margin-bottom: 3vh;
   padding: 1vh 0;
+  display: block;
 }
 
 #message{
@@ -265,11 +428,34 @@ input{
   height: 10vh;
 }
 
-
 #submit{
   background-color: #48449C;
   color: White;
   font-weight: bold;
   font-size: .8em;
   padding: 1vh 0;
+}
+
+input, textarea{
+  margin-top: 1vh;
+}
+
+@media (orientation: landscape) and (max-width: 1200px){
+  #contact{
+    width: 65vw;
+    background-size: 68vw;
+  }
+
+  input, #message{
+    width: 45vw;
+  }
+}
+
+@media (min-width: 1200px){
+  #contact{
+    background-image: url(../images/dorazio.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: 85vw;
+    height: 85vh;
+  }
 }
